@@ -152,8 +152,9 @@ header .username {
 }*/
 body {
 	background-image: url("../photos/awkward.jpg");
-	background-size:cover;
+	background-size: cover;
 	background-position: center;
+	background-repeat: no-repeat;
 }
 
 #splashPage {
@@ -164,6 +165,7 @@ body {
 img#h1 {
 	display: block;
 	margin: 0 auto;
+	width: 70%;
 }
 
 /*h1 {
@@ -222,13 +224,8 @@ div#recipeResults {
 
 #resultsPage .columnFooter {
 	height: 10vh;
-	/*position: absolute;*/
-	/*bottom: 20px;*/
 }
 
-#resultsPage .pageFooter {
-		height: 10vh;
-}
 
 h2 {
   font-size: 30px;
@@ -236,27 +233,12 @@ h2 {
 	font-family: sans-serif;
 }
 
-#recipeResults h2 {
-	font-size: 20px;
-}
 
 #resultsPage p {
 	font-size: 20px;
 	font-family: sans-serif;
 }
 
-/*div.columnContainer {
-	position: relative;
-}
-
-div.columnMain {
-	overflow: scroll;
-}
-
-div.columnFooter {
-	position: absolute;
-	bottom: 0;
-}*/
 
 #resultsPage img {
 	width: 40%;
@@ -292,7 +274,6 @@ main {
 #dateLog.row {
   background: rgb(0,0,0);
   opacity: 0.95;
-  /*margin: 10px 0;*/
   padding: 40px;
   width: 80%;
   overflow: scroll;
@@ -360,7 +341,6 @@ main {
   border-radius: 0px 15px 15px 0px;
   height: 400px;
   overflow: scroll;
-  /*text-align: left;*/
 }
 
 #dates .moviePicture, #dates .recipePicture {
@@ -371,12 +351,10 @@ main {
 
 #dates .moviePicture {
   margin: 0 20px;
-  /*height: 400px;*/
 }
 
 #dates .recipePicture {
   margin-left: 10px;
-  /*height: 400px;*/
 }
 
 #dates .profilePicture {
@@ -390,10 +368,6 @@ main {
   margin-bottom: 10px;
 }
 
-.crud {
-  /*position: fixed;*/
-  /*bottom: 20px;*/
-}
 
 .crud a {
   text-decoration: none;
@@ -471,7 +445,7 @@ footer img {
 	right: 0;
 	margin-top: 60px;
 }
-	@media (max-width: 1000px) {
+	/*@media (max-width: 1000px) {
 body {
       color: white;
   }
@@ -479,17 +453,21 @@ body {
       display: block;
       margin: 0 auto;
   }
-}
-@media (max-width: 800px) {
+}*/
+/*@media (max-width: 1000px) {
 body {
-      color: yellow;
+	color: yellow;
+	font-size: 15px;
   }
-  #splashPage img {
-      display: block;
-      margin: 0 auto;
-      max-width: 70%;
-  }
+
+	#splashPage {
+		background-size: cover;
+	}
+	h2 {
+		font-size: 25px;
+	}
 }
+
 @media (max-width: 500px) {
   body {
     color: red;
@@ -497,11 +475,6 @@ body {
 		background-position: right top;
 		background-attachment: absolute;
 	}
-
-  #h1 {
-    display: block;
-    margin: 0 auto;
-  }
   p.username {
     display: none;
   }
@@ -515,4 +488,4 @@ body {
     font-size: 14px;
     padding: 0;
   }
-}
+}*/
