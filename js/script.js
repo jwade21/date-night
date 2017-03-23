@@ -503,10 +503,22 @@ function timeCalculator(date) {
   var date = new Date(date.date);
   var currentTime = new Date();
   var difference = (currentTime - date);
+  var year = Math.round(difference / (12*4*7*24*60*60*1000))
+  var month = Math.round(difference / (4*7*24*60*60*1000));
+  var week = Math.round(difference / (7*24*60*60*1000));
+  var day = Math.round(difference / (24*60*60*1000));
   var hour = Math.round(difference / (60*60*1000));
   var minute = Math.round(difference / (60*1000));
   var time = $('<span />');
-  if (minute < 1) {
+  if (month >= 12) {
+    return year + ' years ago'
+  } else if (week >= 4) {
+    return month + ' months ago'
+  } else if (day >= 7) {
+    return week + ' weeks ago'
+  } else if (hour > 24) {
+    return day + ' days ago'
+  } else if (minute < 1) {
     return 'Just now';
   } else if (minute < 2) {
     return minute + ' minute ago';
