@@ -434,6 +434,23 @@ ul#dates {
 	font-size: 18px;
 }
 
+.thumbs {
+	font-size: 24px;
+	padding-left: 15%;
+	padding-top: 20%;
+}
+
+.counter {
+	display: inline-block;
+	padding-left: 10px;
+}
+
+.liked {
+	color: rgb(0,0,200);
+}
+.disliked {
+	color: rgb(150,0,0);
+}
 
 /*-----MODAL STYLES-----*/
 

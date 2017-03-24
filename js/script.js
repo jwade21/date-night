@@ -121,6 +121,25 @@ $(document).ready(function () {
     $('#publicDates').removeClass("active");
   })
 
+  // Thumbsup and thumbsdown counters
+  $(document).on('click', '#thumbsup', function() {
+    if ($(this).hasClass('liked')) {
+      $(this).removeClass('liked')
+      $('#likeCounter').html()
+      console.log($('#likeCounter').html());
+    } else {
+      $(this).addClass('liked');
+      $('#likeCounter') + 1
+    }  })
+
+  $(document).on('click', '#thumbsdown', function() {
+    if ($(this).hasClass('disliked')) {
+      $(this).removeClass('disliked')
+    } else {
+      $(this).addClass('disliked');
+    }
+  })
+
   //this changes status of tab hover effect
   $(document).on('click', '#publicDates', function(e){
     e.preventDefault();
@@ -473,6 +492,10 @@ function loadDate(date) {
   // Create column3 children
   var nightTitle = $('<h3 />').text(date.nightName).addClass('nightName');
   var nightSummary = $('<p />').text(date.nightDescription).addClass('nightDescription');
+  var thumbsUp = $('<i class="fa fa-thumbs-up thumbs" aria-hidden="true" id="thumbsup"></i>')
+  var likeCounter = $('<p id="likeCounter" class="counter">0</p>');
+  var thumbsDown = $('<i class="fa fa-thumbs-down thumbs" aria-hidden="true" id="thumbsdown"></i>')
+  var dislikeCounter = $('<p id="dislikeCounter" class="counter">0</p>');
 
   // Append userbox children
   userBox.append(profPic, user, time);
@@ -483,7 +506,7 @@ function loadDate(date) {
   // Append column children
   column1.append(userBox, crud);
   column2.append(moviePic, recipePic, recipeLink);
-  column3.append(nightTitle, nightSummary);
+  column3.append(nightTitle, nightSummary, thumbsUp, likeCounter, thumbsDown, dislikeCounter);
 
   // Append columns to li
   li.append(column1, column2, column3);
